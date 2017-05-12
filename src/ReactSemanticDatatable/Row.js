@@ -17,7 +17,7 @@ class Row extends Component {
     }
 }
 
-Cell.propTypes = {
+Row.propTypes = {
     active: PropTypes.bool,
     as: PropTypes.element,
     cellAs: PropTypes.any,

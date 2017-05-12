@@ -51,7 +51,7 @@ if (!Array.prototype.find) {
   });
 }
 
-const ReactSemanticDatatable = {
+const SemanticDatatable = {
     Body,
     Cell,
     DataTable,
@@ -61,8 +61,8 @@ const ReactSemanticDatatable = {
     Row
 };
 
-export default ReactSemanticDatatable;
+export default SemanticDatatable;
 
 if (typeof(window) !== 'undefined') {
-    window.ReactSemanticDatatable = ReactSemanticDatatable;
+    window.SemanticDatatable = SemanticDatatable;
 }

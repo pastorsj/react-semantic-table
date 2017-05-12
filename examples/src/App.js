@@ -1,8 +1,8 @@
-/**
- * Created by sampastoriza on 3/28/17.
- */
 import React, { Component } from 'react';
-import {Body, Cell, DataTable, Footer, Header, HeaderCell, Row } from '../dist/react-semantic-datatable';
+import logo from './logo.svg';
+import {Body, Cell, DataTable, Header, HeaderCell, Row } from '../../dist/react-semantic-datatable';
+import './App.css';
+
 
 const data = {
     "headers": [
@@ -24,15 +24,16 @@ const data = {
     ]
 }
 
-class DataTableExample extends Component {
-
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        return (
-            <DataTable celled pagination>
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <div className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h2>Welcome to React</h2>
+        </div>
+        <p className="App-intro">
+          <DataTable celled={true} pagination={true}>
                 <Header>
                     {
                         data.headers.map((header, index) => {
@@ -46,7 +47,7 @@ class DataTableExample extends Component {
                 </Header>
                 <Body>
                     {
-                            data.data.map((row, index) => {
+                        data.data.map((row, index) => {
                             return (
                                 <Row>
                                     {
@@ -66,6 +67,10 @@ class DataTableExample extends Component {
                     }
                 </Body>
             </DataTable>
-        )
-    }
+        </p>
+      </div>
+    );
+  }
 }
+
+export default App;

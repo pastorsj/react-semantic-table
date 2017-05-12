@@ -15,7 +15,7 @@ class Footer extends Component {
     }
 }
 
-Cell.propTypes = {
+Footer.propTypes = {
     as: PropTypes.element
 }
 

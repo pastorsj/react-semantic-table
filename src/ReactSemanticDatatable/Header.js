@@ -17,7 +17,7 @@ class Header extends Component {
     }
 }
 
-Cell.propTypes = {
+Header.propTypes = {
     as: PropTypes.element,
     children: PropTypes.node,
     className: PropTypes.string,
