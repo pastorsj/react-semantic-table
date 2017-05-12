@@ -54,6 +54,10 @@ DataTable.propTypes = {
         PropTypes.bool,
         PropTypes.any
     ]),
+    pagination: PropTypes.oneOf([
+        PropTypes.bool,
+        PropTypes.arrayOf(PropTypes.number)
+    ]),
     renderBodyRow: PropTypes.any,
     selectable: PropTypes.bool,
     singleLine: PropTypes.bool,

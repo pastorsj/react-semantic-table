@@ -21,7 +21,12 @@ Cell.propTypes = {
     as: PropTypes.element,
     children: PropTypes.node,
     className: PropTypes.string,
-    sorted: PropTypes.any
+    sortable: PropTypes.oneOf([
+        PropTypes.bool,
+        PropTypes.oneOf([
+            'ascending', 'descending'
+        ])
+    ])
 }
 
 export default HeaderCell;

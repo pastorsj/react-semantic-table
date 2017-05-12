@@ -32,12 +32,12 @@ class DataTableExample extends Component {
 
     render() {
         return (
-            <DataTable celled>
+            <DataTable celled pagination>
                 <Header>
                     {
                         data.headers.map((header, index) => {
                             return (
-                                <HeaderCell key={index}>
+                                <HeaderCell sortable key={index}>
                                     {header}
                                 </HeaderCell>
                             )
