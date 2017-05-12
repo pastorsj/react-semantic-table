@@ -2,7 +2,7 @@
  * Created by sampastoriza on 3/28/17.
  */
 import React, { Component } from 'react';
-import {Body, Cell, DataTable, Footer, Header, HeaderCell, Row } from 'SemanticDatatable';
+import {Body, Cell, DataTable, Footer, Header, HeaderCell, Row } from '../dist/react-semantic-datatable';
 
 const data = {
     "headers": [
