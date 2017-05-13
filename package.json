@@ -2,7 +2,7 @@
   "name": "react-semantic-datatable",
   "version": "2.1.2",
   "description": "A simple datatable implementation using semantic ui",
-  "main": "SemanticDatatable.js",
+  "main": "index.js",
   "scripts": {
     "watch": "webpack --progress --colors --watch",
     "build": "webpack --progress --colors",
