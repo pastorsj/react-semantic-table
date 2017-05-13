@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import {DataTable} from 'react-semantic-datatable';
+import {Body, Cell, DataTable, Header, HeaderCell, Row} from '../../src/SemanticDatatable';
 
 const data = {
     "headers": [
@@ -26,16 +24,38 @@ const data = {
 class App extends Component {
   render() {
     return (
-      <div className="App">
-            <div className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <h2>Welcome to React</h2>
-            </div>
-            <p className="App-intro">
-                <DataTable>
-                </DataTable>
-            </p>
-      </div>
+        <DataTable>
+            <Header>
+            {
+                data.headers.map((header, index) => {
+                    return (
+                        <HeaderCell sortable key={index}>
+                            {header}
+                        </HeaderCell>
+                    )
+                })
+            }
+            </Header>
+            <Body>
+                {
+                    data.data.map((row, index) => {
+                        return (
+                            <Row key={index}>
+                                {
+                                    data.headers.map((header, index2) => {
+                                        return (
+                                            <Cell key={index2}>
+                                                {row[header]}
+                                            </Cell>
+                                        )
+                                    })
+                                }
+                            </Row>
+                        )
+                    })
+                }
+            </Body>
+        </DataTable>
     );
   }
 }
