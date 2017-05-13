@@ -24,7 +24,7 @@ const data = {
 class App extends Component {
   render() {
     return (
-        <DataTable>
+        <DataTable pagination={true}>
             <Header>
             {
                 data.headers.map((header, index) => {
