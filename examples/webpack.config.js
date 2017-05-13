@@ -5,10 +5,10 @@ var webpack = require('webpack');
 
 module.exports = {
     devtool: 'eval-source-map',
-    entry: './src/SemanticDatatable.js',
+    entry: './src/index.js',
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: 'react-semantic-datatable.js'
+        filename: 'bundle.js'
     },
     module: {
         loaders: [

@@ -1,4 +1,3 @@
-import React from 'react'; // eslint-disable-line
 import Body from './ReactSemanticDatatable/Body';
 import Cell from './ReactSemanticDatatable/Cell';
 import DataTable from './ReactSemanticDatatable/DataTable';
@@ -52,7 +51,7 @@ if (!Array.prototype.find) {
     });
 }
 
-const SemanticDatatable = {
+export {
     Body,
     Cell,
     DataTable,
@@ -61,11 +60,3 @@ const SemanticDatatable = {
     HeaderCell,
     Row
 };
-
-/* eslint-disable */
-if (typeof (window) !== 'undefined') {
-    window.SemanticDatatable = SemanticDatatable;
-}
-/* eslint-enable */
-
-export default SemanticDatatable;

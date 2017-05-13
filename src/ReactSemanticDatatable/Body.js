@@ -1,14 +1,14 @@
  // eslint-disable-next-line
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {Table} from 'semantic-ui-react';
+import {Table} from 'semantic-ui-react'; // eslint-disable-line
 
 class Body extends Component {
 
     render() {
         return (
             <Table.Body {...this.props}>
-                this.props.children
+                {this.props.children}
             </Table.Body>
         );
     }

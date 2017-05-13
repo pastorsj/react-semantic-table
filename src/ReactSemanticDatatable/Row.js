@@ -8,7 +8,7 @@ class Row extends Component {
     render() {
         return (
             <Table.Row {...this.props}>
-                this.props.children
+                {this.props.children}
             </Table.Row>
         );
     }

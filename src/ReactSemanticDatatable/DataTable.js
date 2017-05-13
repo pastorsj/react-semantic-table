@@ -6,11 +6,8 @@ import {Table} from 'semantic-ui-react';  // eslint-disable-line
 class DataTable extends Component {
     render() {
         return (
-            <Table {...this.props.filter(prop => {
-                console.log('prop');
-                return true;
-            })}>
-                this.props.children
+            <Table {...this.props}>
+                {this.props.children}
             </Table>
         );
     }
@@ -32,7 +29,7 @@ DataTable.propTypes = {
     celled: PropTypes.bool,
     children: PropTypes.node,
     className: PropTypes.string,
-    collapsing: PropTypes.collapsing,
+    collapsing: PropTypes.bool,
     color: PropTypes.oneOf([
         'red', 'orange', 'yellow', 'olive', 'green', 'teal', 'blue', 'violet', 'purple', 'pink', 'brown', 'grey', 'black'
     ]),

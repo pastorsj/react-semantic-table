@@ -8,7 +8,7 @@ class HeaderCell extends Component {
     render() {
         return (
             <Table.HeaderCell {...this.props}>
-                this.props.children
+                {this.props.children}
             </Table.HeaderCell>
         );
     }

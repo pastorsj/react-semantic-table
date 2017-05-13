@@ -8,7 +8,7 @@ class Cell extends Component {
     render() {
         return (
             <Table.Cell {...this.props}>
-                this.props.children
+                {this.props.children}
             </Table.Cell>
         );
     }

@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import { Body, Cell, DataTable, Header, HeaderCell, Row } from 'react-semantic-datatable';
-import './App.css';
-
+import {Body, Cell, DataTable, Header, HeaderCell, Row} from '../../src/SemanticDatatable';
 
 const data = {
     "headers": [
@@ -27,48 +24,38 @@ const data = {
 class App extends Component {
   render() {
     return (
-      <div className="App">
-            <div className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <h2>Welcome to React</h2>
-            </div>
-            <p className="App-intro">
-                <DataTable>
-                    <Header>
-                    {
-                        data.headers.map((header, index) => {
-                            return (
-                                <HeaderCell sortable key={index}>
-                                    {header}
-                                </HeaderCell>
-                            )
-                        })
-                    }
-                    </Header>
-                    <Body>
-                        {
-                            data.data.map((row, index) => {
-                                return (
-                                    <Row>
-                                        {
-                                            data.headers.map((header, index) => {
-                                                return (
-                                                    <div key={index}>
-                                                        <Cell>
-                                                            {row[header]}
-                                                        </Cell>
-                                                    </div>
-                                                )
-                                            })
-                                        }
-                                    </Row>
-                                )
-                            })
-                        }
-                    </Body>
-                </DataTable>
-            </p>
-      </div>
+        <DataTable pagination={true}>
+            <Header>
+            {
+                data.headers.map((header, index) => {
+                    return (
+                        <HeaderCell sortable key={index}>
+                            {header}
+                        </HeaderCell>
+                    )
+                })
+            }
+            </Header>
+            <Body>
+                {
+                    data.data.map((row, index) => {
+                        return (
+                            <Row key={index}>
+                                {
+                                    data.headers.map((header, index2) => {
+                                        return (
+                                            <Cell key={index2}>
+                                                {row[header]}
+                                            </Cell>
+                                        )
+                                    })
+                                }
+                            </Row>
+                        )
+                    })
+                }
+            </Body>
+        </DataTable>
     );
   }
 }
