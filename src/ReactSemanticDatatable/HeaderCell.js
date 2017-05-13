@@ -18,7 +18,7 @@ HeaderCell.propTypes = {
     as: PropTypes.element,
     children: PropTypes.node,
     className: PropTypes.string,
-    sortable: PropTypes.oneOf([
+    sortable: PropTypes.oneOfType([
         PropTypes.bool,
         PropTypes.oneOf([
             'ascending', 'descending'

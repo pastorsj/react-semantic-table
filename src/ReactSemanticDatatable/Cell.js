@@ -19,7 +19,7 @@ Cell.propTypes = {
     as: PropTypes.element,
     children: PropTypes.node,
     className: PropTypes.string,
-    collapsing: PropTypes.collapsing,
+    collapsing: PropTypes.bool,
     content: PropTypes.any,
     disabled: PropTypes.bool,
     error: PropTypes.bool,
