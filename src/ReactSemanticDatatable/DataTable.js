@@ -1,17 +1,13 @@
-import React, { Component } from 'react';
+ // eslint-disable-next-line
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import { Table } from 'semantic-ui-react'
+import {Table} from 'semantic-ui-react';  // eslint-disable-line
 
 class DataTable extends Component {
-
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
-            <Table {...this.props.filter((prop) => {
-                console.log('prop')
+            <Table {...this.props.filter(prop => {
+                console.log('prop');
                 return true;
             })}>
                 this.props.children
@@ -75,6 +71,6 @@ DataTable.propTypes = {
     textAlign: PropTypes.any,
     unstackable: PropTypes.bool,
     verticalAlign: PropTypes.any
-}
+};
 
 export default DataTable;

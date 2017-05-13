@@ -1,12 +1,9 @@
-import React, { Component } from 'react';
+ // eslint-disable-next-line
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import { Table } from 'semantic-ui-react'
+import {Table} from 'semantic-ui-react';  // eslint-disable-line
 
 class Cell extends Component {
-
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         return (
@@ -31,10 +28,10 @@ Cell.propTypes = {
     positive: PropTypes.bool,
     selectable: PropTypes.bool,
     singleLine: PropTypes.bool,
-    textAlign: PropTypes.any, //Should be enum, not sure how to represent that
+    textAlign: PropTypes.any, // Should be enum, not sure how to represent that
     verticalAlign: PropTypes.any,
     warning: PropTypes.bool,
-    width: PropTypes.any,
-}
+    width: PropTypes.any
+};
 
 export default Cell;
