@@ -29,7 +29,7 @@ class App extends Component {
             {
                 data.headers.map((header, index) => {
                     return (
-                        <HeaderCell sortable key={index}>
+                        <HeaderCell sortable header={header} key={index}>
                             {header}
                         </HeaderCell>
                     )
@@ -44,7 +44,7 @@ class App extends Component {
                                 {
                                     data.headers.map((header, index2) => {
                                         return (
-                                            <Cell key={index2}>
+                                            <Cell column={header} key={index2}>
                                                 {row[header]}
                                             </Cell>
                                         )

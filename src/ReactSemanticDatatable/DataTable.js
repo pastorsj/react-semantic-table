@@ -9,6 +9,17 @@ class DataTable extends Component {
     constructor(props) {
         super(props);
         this.filteredProps = filterProps(this.props, 'pagination');
+        this.state = {
+            sortable: false,
+            pagination: props.pagination || false,
+            filterable: false
+        };
+    }
+
+    componentDidMount() {
+        React.Children.forEach(this.props.children, child => {
+            console.log('Child', child);
+        });
     }
 
     render() {
@@ -20,16 +31,21 @@ class DataTable extends Component {
     }
 }
 
+DataTable.defaultProps = {
+    pagination: false,
+    basic: true
+};
+
 /*
     https://react.semantic-ui.com/collections/table#table-example-pagination
 */
 DataTable.propTypes = {
     as: PropTypes.element,
-    attached: PropTypes.oneOf([
+    attached: PropTypes.oneOfType([
         PropTypes.bool,
         PropTypes.any // TODO
     ]),
-    basic: PropTypes.oneOf([
+    basic: PropTypes.oneOfType([
         PropTypes.bool,
         PropTypes.any
     ]),

@@ -8,7 +8,7 @@ class HeaderCell extends Component {
 
     constructor(props) {
         super(props);
-        this.filteredProps = filterProps(this.props, 'sortable');
+        this.filteredProps = filterProps(this.props, 'sortable', 'header');
     }
 
     render() {
@@ -24,6 +24,7 @@ HeaderCell.propTypes = {
     as: PropTypes.element,
     children: PropTypes.node,
     className: PropTypes.string,
+    header: PropTypes.string,
     sortable: PropTypes.oneOfType([
         PropTypes.bool,
         PropTypes.oneOf([
