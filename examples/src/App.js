@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import { DataTable } from '../../dist/react-semantic-datatable';
 import './App.css';
+import {DataTable} from '../../src/SemanticDatatable';
 
 const data = {
     "headers": [
