@@ -24,6 +24,6 @@ HeaderCell.propTypes = {
             'ascending', 'descending'
         ])
     ])
-}
+};
 
 export default HeaderCell;

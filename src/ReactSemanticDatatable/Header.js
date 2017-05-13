@@ -19,6 +19,6 @@ Header.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
     fullWidth: PropTypes.bool
-}
+};
 
 export default Header;
