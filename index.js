@@ -1,1 +1,1 @@
-require('./dist/react-semantic-datatable.min');
+require('./dist/react-semantic-datatable');
