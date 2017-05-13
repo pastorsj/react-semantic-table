@@ -10,7 +10,10 @@ class DataTable extends Component {
 
     render() {
         return (
-            <Table {...this.props}>
+            <Table {...this.props.filter((prop) => {
+                console.log('prop')
+                return true;
+            })}>
                 this.props.children
             </Table>
         );

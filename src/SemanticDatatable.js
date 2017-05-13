@@ -1,3 +1,4 @@
+import React from 'react';
 import Body from './ReactSemanticDatatable/Body';
 import Cell from './ReactSemanticDatatable/Cell';
 import DataTable from './ReactSemanticDatatable/DataTable';
@@ -52,17 +53,17 @@ if (!Array.prototype.find) {
 }
 
 const SemanticDatatable = {
-    Body,
-    Cell,
-    DataTable,
-    Footer,
-    Header,
-    HeaderCell,
-    Row
-};
-
-export default SemanticDatatable;
+  Body,
+  Cell,
+  DataTable,
+  Footer,
+  Header,
+  HeaderCell,
+  Row
+}
 
 if (typeof(window) !== 'undefined') {
     window.SemanticDatatable = SemanticDatatable;
 }
+
+export default SemanticDatatable;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import {Body, Cell, DataTable, Header, HeaderCell, Row } from '../../dist/react-semantic-datatable';
+import { Body, Cell, DataTable, Header, HeaderCell, Row } from '../../dist/react-semantic-datatable';
 import './App.css';
 
 
@@ -28,13 +28,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          <DataTable celled={true} pagination={true}>
-                <Header>
+            <div className="App-header">
+                <img src={logo} className="App-logo" alt="logo" />
+                <h2>Welcome to React</h2>
+            </div>
+            <p className="App-intro">
+                <DataTable>
+                    <Header>
                     {
                         data.headers.map((header, index) => {
                             return (
@@ -44,30 +44,30 @@ class App extends Component {
                             )
                         })
                     }
-                </Header>
-                <Body>
-                    {
-                        data.data.map((row, index) => {
-                            return (
-                                <Row>
-                                    {
-                                        data.headers.map((header, index) => {
-                                            return (
-                                                <div key={index}>
-                                                    <Cell>
-                                                        {row[header]}
-                                                    </Cell>
-                                                </div>
-                                            )
-                                        })
-                                    }
-                                </Row>
-                            )
-                        })
-                    }
-                </Body>
-            </DataTable>
-        </p>
+                    </Header>
+                    <Body>
+                        {
+                            data.data.map((row, index) => {
+                                return (
+                                    <Row>
+                                        {
+                                            data.headers.map((header, index) => {
+                                                return (
+                                                    <div key={index}>
+                                                        <Cell>
+                                                            {row[header]}
+                                                        </Cell>
+                                                    </div>
+                                                )
+                                            })
+                                        }
+                                    </Row>
+                                )
+                            })
+                        }
+                    </Body>
+                </DataTable>
+            </p>
       </div>
     );
   }

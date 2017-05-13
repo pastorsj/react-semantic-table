@@ -28,9 +28,9 @@ Row.propTypes = {
     error: PropTypes.bool,
     negative: PropTypes.bool,
     positive: PropTypes.bool,
-    textAlign: PropTypes.any, //Should be enum, not sure how to represent that
+    textAlign: PropTypes.any, // Should be enum, not sure how to represent that
     verticalAlign: PropTypes.any,
     warning: PropTypes.bool
-}
+};
 
 export default Row;
