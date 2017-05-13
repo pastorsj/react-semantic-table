@@ -2,12 +2,18 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Table} from 'semantic-ui-react'; // eslint-disable-line
+import {filterProps} from '../Util/FilterProps';
 
 class HeaderCell extends Component {
 
+    constructor(props) {
+        super(props);
+        this.filteredProps = filterProps(this.props, 'sortable');
+    }
+
     render() {
         return (
-            <Table.HeaderCell {...this.props}>
+            <Table.HeaderCell {...this.filteredProps}>
                 {this.props.children}
             </Table.HeaderCell>
         );

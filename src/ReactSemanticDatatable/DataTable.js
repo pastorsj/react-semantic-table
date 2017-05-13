@@ -2,11 +2,18 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Table} from 'semantic-ui-react';  // eslint-disable-line
+import {filterProps} from '../Util/FilterProps';
 
 class DataTable extends Component {
+
+    constructor(props) {
+        super(props);
+        this.filteredProps = filterProps(this.props, 'pagination');
+    }
+
     render() {
         return (
-            <Table {...this.props}>
+            <Table {...this.filteredProps}>
                 {this.props.children}
             </Table>
         );
@@ -31,11 +38,13 @@ DataTable.propTypes = {
     className: PropTypes.string,
     collapsing: PropTypes.bool,
     color: PropTypes.oneOf([
-        'red', 'orange', 'yellow', 'olive', 'green', 'teal', 'blue', 'violet', 'purple', 'pink', 'brown', 'grey', 'black'
+        'red', 'orange', 'yellow', 'olive', 'green', 'teal', 'blue',
+        'violet', 'purple', 'pink', 'brown', 'grey', 'black'
     ]),
     columns: PropTypes.oneOf([
         1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
-        'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen'
+        'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight',
+        'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen'
     ]),
     compact: PropTypes.oneOfType([
         PropTypes.bool,
