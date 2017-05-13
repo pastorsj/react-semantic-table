@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import { Body, Cell, DataTable, Header, HeaderCell, Row } from '../../dist/react-semantic-datatable';
+import { Body, Cell, DataTable, Header, HeaderCell, Row } from 'react-semantic-datatable';
 import './App.css';
 
 
