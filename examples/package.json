@@ -5,7 +5,8 @@
   "dependencies": {
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "react-semantic-datatable": "^2.0.0"
+    "semantic-ui-react": "^0.68.3",
+    "prop-types": "^15.5.10"
   },
   "devDependencies": {
     "react-scripts": "0.9.5"

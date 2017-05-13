@@ -45,6 +45,6 @@
     "eslint-config-rose": "^1.0.5",
     "eslint-plugin-react": "^7.0.0",
     "watchify": "^3.9.0",
-    "webpack": "^2.5.1"
+    "webpack": "2.4.0"
   }
 }

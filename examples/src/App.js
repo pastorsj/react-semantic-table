@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import { Body, Cell, DataTable, Header, HeaderCell, Row } from 'react-semantic-datatable';
+import { DataTable } from '../../dist/react-semantic-datatable';
 import './App.css';
-
 
 const data = {
     "headers": [
@@ -34,38 +33,6 @@ class App extends Component {
             </div>
             <p className="App-intro">
                 <DataTable>
-                    <Header>
-                    {
-                        data.headers.map((header, index) => {
-                            return (
-                                <HeaderCell sortable key={index}>
-                                    {header}
-                                </HeaderCell>
-                            )
-                        })
-                    }
-                    </Header>
-                    <Body>
-                        {
-                            data.data.map((row, index) => {
-                                return (
-                                    <Row>
-                                        {
-                                            data.headers.map((header, index) => {
-                                                return (
-                                                    <div key={index}>
-                                                        <Cell>
-                                                            {row[header]}
-                                                        </Cell>
-                                                    </div>
-                                                )
-                                            })
-                                        }
-                                    </Row>
-                                )
-                            })
-                        }
-                    </Body>
                 </DataTable>
             </p>
       </div>
