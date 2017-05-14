@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Table} from 'semantic-ui-react';  // eslint-disable-line
 import {filterProps} from '../Util/FilterProps';
+import ChildrenData from '../Util/ChildrenData';
 
 class DataTable extends Component {
 
@@ -14,12 +15,8 @@ class DataTable extends Component {
             pagination: props.pagination || false,
             filterable: false
         };
-    }
 
-    componentDidMount() {
-        React.Children.forEach(this.props.children, child => {
-            console.log('Child', child);
-        });
+        this.childrenData = new ChildrenData();
     }
 
     render() {
