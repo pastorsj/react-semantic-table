@@ -2,7 +2,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Table} from 'semantic-ui-react';  // eslint-disable-line
-import CircularJson from 'circular-json';
+import ChildrenData from '../Util/ChildrenData';
 
 class DataTable extends Component {
 
@@ -13,10 +13,13 @@ class DataTable extends Component {
             pagination: this.props.pagination || false,
             filterable: false
         };
+        this.childrenData = new ChildrenData();
     }
 
     componentWillMount() {
-        console.log('All Props', CircularJson.stringify(this.props, null, 2));
+        console.log('All Props', this.props);
+        const propStructure = this.childrenData.formatChildrenData(this.props);
+        console.log('Prop Structure', propStructure);
     }
 
     render() {
