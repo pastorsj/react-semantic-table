@@ -2,19 +2,13 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Table} from 'semantic-ui-react';  // eslint-disable-line
-import {filterProps} from '../Util/FilterProps';
 
 class Cell extends Component {
 
-    constructor(props) {
-        super(props);
-        this.filteredProps = filterProps(this.props, 'column');
-    }
-
     render() {
         return (
-            <Table.Cell {...this.filteredProps}>
-                {this.props.children}
+            <Table.Cell>
+            {this.props.children}
             </Table.Cell>
         );
     }

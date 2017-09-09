@@ -7,7 +7,7 @@ class Footer extends Component {
 
     render() {
         return (
-            <Table.Footer {...this.props} />
+            <Table.Footers/>
         );
     }
 }

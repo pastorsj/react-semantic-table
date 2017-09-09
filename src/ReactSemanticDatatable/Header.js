@@ -7,7 +7,7 @@ class Header extends Component {
 
     render() {
         return (
-            <Table.Header {...this.props}>
+            <Table.Header>
                 {this.props.children}
             </Table.Header>
         );

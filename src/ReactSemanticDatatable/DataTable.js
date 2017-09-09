@@ -2,27 +2,27 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Table} from 'semantic-ui-react';  // eslint-disable-line
-import {filterProps} from '../Util/FilterProps';
-import ChildrenData from '../Util/ChildrenData';
+import CircularJson from 'circular-json';
 
 class DataTable extends Component {
 
     constructor(props) {
         super(props);
-        this.filteredProps = filterProps(this.props, 'pagination');
         this.state = {
             sortable: false,
-            pagination: props.pagination || false,
+            pagination: this.props.pagination || false,
             filterable: false
         };
+    }
 
-        this.childrenData = new ChildrenData();
+    componentWillMount() {
+        console.log('All Props', CircularJson.stringify(this.props, null, 2));
     }
 
     render() {
         return (
-            <Table {...this.filteredProps}>
-                {this.props.children}
+            <Table>
+            {this.props.children}
             </Table>
         );
     }

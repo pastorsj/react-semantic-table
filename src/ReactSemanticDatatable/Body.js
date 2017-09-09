@@ -7,8 +7,8 @@ class Body extends Component {
 
     render() {
         return (
-            <Table.Body {...this.props}>
-                {this.props.children}
+            <Table.Body>
+            {this.props.children}
             </Table.Body>
         );
     }

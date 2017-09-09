@@ -17,7 +17,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "express": "^4.15.2",
     "react-semantic-datatable": "^2.1.4",
-    "webpack": "^2.5.1"
+    "webpack": "^2.7.0"
   },
   "scripts": {
     "watch": "webpack --progress --colors --watch",
