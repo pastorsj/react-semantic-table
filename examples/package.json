@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "semantic-ui-react": "^0.68.3",
-    "prop-types": "^15.5.10"
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "semantic-ui-react": "^0.77.1",
+    "prop-types": "^15.6.0"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
@@ -16,10 +16,12 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "express": "^4.15.2",
+    "parcel-bundler": "^1.4.1",
     "react-semantic-datatable": "^2.1.4",
     "webpack": "^2.7.0"
   },
   "scripts": {
+    "parcel": "parcel ./src/index.js",
     "watch": "webpack --progress --colors --watch",
     "build": "webpack --progress --colors",
     "start": "node server.js"

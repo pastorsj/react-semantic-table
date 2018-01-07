@@ -19,7 +19,7 @@ Row.propTypes = {
     as: PropTypes.element,
     cellAs: PropTypes.any,
     cells: PropTypes.array,
-    children: PropTypes.node,
+    children: PropTypes.any,
     className: PropTypes.string,
     disabled: PropTypes.bool,
     error: PropTypes.bool,

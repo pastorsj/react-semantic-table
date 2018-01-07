@@ -2,6 +2,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Table} from 'semantic-ui-react';  // eslint-disable-line
+import Header from './Header';
+import Body from './Body';
 import ChildrenData from '../Util/ChildrenData';
 
 class DataTable extends Component {
@@ -9,25 +11,35 @@ class DataTable extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            sortable: false,
-            pagination: this.props.pagination || false,
-            filterable: false
+            propStructure: []
         };
         this.childrenData = new ChildrenData();
     }
 
     componentWillMount() {
-        console.log('All Props', this.props);
-        const propStructure = this.childrenData.formatChildrenData(this.props);
-        console.log('Prop Structure', propStructure);
+        this.setState({
+            propStructure: this.childrenData.formatChildrenData(this.props)
+        });
     }
 
     render() {
+        console.log('propstructure', this.state.propStructure);
+        const children = this.state.propStructure.children;
+        console.log('Children', children);
+        if (children) {
+            return (
+                <Table {...this.state.propStructure.props}>
+                    <Header {...children.header}>
+                    </Header>
+                    <Body {...children.body}>
+                    </Body>
+                </Table>
+            );
+        }
         return (
-            <Table>
-            {this.props.children}
-            </Table>
-        );
+            <div> The structure is incorrect </div>
+        )
+        
     }
 }
 

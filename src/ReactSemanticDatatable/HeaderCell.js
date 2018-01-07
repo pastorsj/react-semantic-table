@@ -16,7 +16,7 @@ class HeaderCell extends Component {
 
 HeaderCell.propTypes = {
     as: PropTypes.element,
-    children: PropTypes.node,
+    children: PropTypes.any,
     className: PropTypes.string,
     header: PropTypes.string,
     sortable: PropTypes.oneOfType([

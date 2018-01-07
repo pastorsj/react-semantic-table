@@ -17,7 +17,7 @@ class Cell extends Component {
 Cell.propTypes = {
     active: PropTypes.bool,
     as: PropTypes.element,
-    children: PropTypes.node,
+    children: PropTypes.any,
     className: PropTypes.string,
     collapsing: PropTypes.bool,
     columnn: PropTypes.string,
